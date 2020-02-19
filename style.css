@@ -8,6 +8,9 @@ body{
 
     /*pegando 100% da altura viewport height*/
     height: 100vh;
+
+    /*fonte*/
+    font-family: 'Roboto', sans-serif;
 }
 
 /* TITULOS */
