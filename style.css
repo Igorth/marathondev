@@ -1,7 +1,7 @@
+/* GLOBAL */
 html, body{
     margin: 0;
 }
-
 body{
     display: flex;
     flex-direction: column;
@@ -10,24 +10,19 @@ body{
     height: 100vh;
 }
 
-footer{
-    margin-top: auto;
+/* TITULOS */
+header h1, main h2{
+    margin-bottom: 70px;
 }
 
+.form h2{
+    text-align: right;
+}
+
+/* ESTRUTURA */
 /* Alinhamentos, espaçamentos, larguras e alturas */
 header, main, footer{
     text-align: center;
-}
-
-.donors{
-    display: grid;
-    /*Cria 4 colunas flexivel*/
-    grid-template-columns: 1fr 1fr 1fr 1fr; 
-}
-
-.form{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
 }
 
 header, .form, main{
@@ -39,6 +34,50 @@ header, .form, main{
     max-width: 500px;
 }
 
-header h1, main h2{
-    margin-bottom: 70px;
+/*HEADER*/
+header button{
+    padding: 8px 16px;
+    border-radius: 4px;
+}
+
+/* FORM */
+section.form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /*Espaçamento do grid*/
+    grid-gap: 45px;
+}
+
+form input,
+form button{
+    /*Largura*/
+    width: 100%;
+
+    /*Espaçamento*/
+    margin-bottom: 4px;
+
+    /*Corrigindo uma propriedade padrao*/
+    box-sizing: border-box;
+
+    /*preenchimentos*/
+    padding: 8px 16px;
+
+    /*bordas*/
+    border-radius: 4px;
+    border: 1px red solid;
+}
+
+
+/* MAIN */
+main .donors{
+    display: grid;
+    /*Cria 4 colunas flexivel*/
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+/*FOOTER*/
+footer{
+    margin-top: auto;
+    padding: 16px;
+    border: 1px solid #eee;
 }
