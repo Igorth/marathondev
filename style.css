@@ -71,6 +71,10 @@ header button{
     margin: 70px 0 ;
 }
 
+header p{
+    font-size: 14px;
+}
+
 /* FORM */
 section.form{
     display: grid;
@@ -123,6 +127,41 @@ main .donors{
     /*Cria 4 colunas flexivel*/
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
+
+.blood{
+    color:#ff4f4f;
+    font-weight: bold;
+    font-size: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+/*GOTA*/
+.blood::before{
+    content: "";
+    background-color: #ff4f4f11;
+    width: 40px;
+    height: 40px;
+
+    /*Criando uma nova camada com o position*/
+    position: absolute;
+
+    /*criando a gota*/
+    border-radius: 50%;
+    border-top-right-radius: 0;
+
+    transform: rotate(-45deg);
+
+}
+.donor p{
+    margin-top: 24px;
+    font-size: 14px;
+}
+
 
 /*FOOTER*/
 footer{
