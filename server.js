@@ -1,10 +1,21 @@
+// configurando o servidor
 const express = require("express")
 const server = express()
 
-server.get("/", function(req, res){
-    return res.send("ok, cheguei aqui")
+// configurando a template engine
+const nunjucks = require("nunjucks")
+nunjucks.configure("./", {
+    express: server
 })
 
+
+//Configurar a apresentação da página
+server.get("/", function(req, res){
+    return res.render("index.html")
+})
+
+
+// Ligar o servidor e permitir o acesso na porta 3000
 server.listen(3000, function(){
     console.log("Iniciei o servidor.")
 })
