@@ -2,6 +2,9 @@
 const express = require("express")
 const server = express()
 
+// configurar o servidor para apresentar arquivos estaticos
+server.use(express.static('public'))
+
 // configurando a template engine
 const nunjucks = require("nunjucks")
 nunjucks.configure("./", {
