@@ -35,22 +35,12 @@
         <!-- Conteudo central-->
         <h2>Last <span>Donors</span></h2>
         <section class="donors">
-            <div class="donor">
-                <div class="blood">AB+</div>
-                <p>Igor Dias</p>
-            </div>
-            <div class="donor">
-                <div class="blood">AB+</div>
-                <p>Igor Dias</p>
-            </div>
-            <div class="donor">
-                <div class="blood">AB+</div>
-                <p>Igor Dias</p>
-            </div>
-            <div class="donor">
-                <div class="blood">AB+</div>
-                <p>Igor Dias</p>
-            </div>
+            {% for donor in donors %}
+                <div class="donor">
+                    <div class="blood">{{donor.blood}}</div>
+                    <p>{{donor.name}}</p>
+                </div>
+            {%endfor%}
         </section>
     </main>
 
